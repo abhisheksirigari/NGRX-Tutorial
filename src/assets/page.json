@@ -1,0 +1,41 @@
+{  
+   "id": "1234",
+   "components": [  
+      {  
+         "viewName": "heading",
+         "content": {  
+            "title": "Service Providers",
+            "subtitle": "A service provider is a vendor that provides solutions and/or services to end users and organizations."
+         }
+      },
+      {  
+         "viewName": "searchBar",
+         "content": {  
+            "placeholder": "Search providers"
+         }
+      },
+      {  
+         "viewName": "serviceProvidersList",
+         "content": {  
+            "list": [  
+               {  
+                  "name": "Adarsha Control & Automation Pvt Ltd",
+                  "description": "ADARSHA CONTROL SYSTEMS is an ISO 9001-2008 accredited company having more than twenty-two years of experience in design & manufacturing of Electrical & Automation control panels, control room furniture's & sheet steel enclosure for various applications & industries."
+               },
+               {  
+                  "name": "Alliance Automotion",
+                  "description": "Alliance Automation is a multi-disciplined industrial automation and electrical engineering company. We specialise in delivering value added solutions, consultancy and support to our customers and partners in Oil and Gas, Water and Waste Water, Mining, Manufacturing and Infrastructure market sectors both in Australia and overseas."
+               },
+               {  
+                  "name": "BitControl",
+                  "description": "BitControl is a young and dynamic company that takes advantage of the expertise and know-how of collaborators who can count on decades of experience gained in successful automation and IT companies."
+               },
+               {  
+                  "name": "RMS",
+                  "description": "RMS focuses on three main services: maintenance, new projects and trading of second-hand parts."
+               }
+            ]
+         }
+      }
+   ]
+}

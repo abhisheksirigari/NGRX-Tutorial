@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-8 mx-auto" *ngIf="appData">
+            <div class="todolist not-done">
+                <h1 class="title">{{headingdata.content.title}}</h1>
+                <p class="subtitle">{{headingdata.content.subtitle}}</p>
+
+                <div class="left">
+
+                    <input type="text" class="form-control input-search" placeholder="{{searchBar.content.placeholder}}"
+                        name="search" [(ngModel)]="searchModel" autocomplete="off">
+                    <button (click)="searchItems(searchModel)" class="btn btn-success">Search</button>
+                </div>
+
+                <hr>
+
+                <div class="right" *ngIf="tutorials">
+
+                    <ul id="sortable" class="list-unstyled">
+                        <li class="ui-state-default" *ngFor="let tutorial of tutorials | async">
+                            <p class="d-flex justify-content-between">
+                                <span class="title">{{ tutorial.name }}</span>
+                                <span class="isactive" *ngIf="tutorial.active">Inactive</span>
+                            </p>
+                            <p class="description">{{tutorial.description}}</p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
