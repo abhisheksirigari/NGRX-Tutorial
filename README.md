@@ -1,4 +1,19 @@
-# NgrxTut
+# Ngrx Tutorial
+
+```javascript 
+
+Create Angular application. You can use mockup to build simple template. 
+Please apply some basic styles for this template (you can use Bootstrap 4).
+Parts of application: header with title and subtitle, search input and list of Service Providers.
+
+1) Application has to be opened by localhost URL (without any port)
+2) All data has to be loaded from json and saved in store.
+3) page_components.json stores information about page components (header, search input and Service Providers list) 
+4) inactive-service-providers.json stores information about inactive Service Providers. This information has to be matched with 
+info from page_components.json. Service Providers status has to be displayed inside Service Provider card (see mockup). 
+5) Search box has to filter Service Providers by name. Search starts by enter button click. 
+
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
