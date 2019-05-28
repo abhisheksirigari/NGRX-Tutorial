@@ -19,7 +19,7 @@ of Service Providers.
 ```
 
 ## Output: 
-![output screenshot](https://github.com/abhisheksirigari/NGRX-Tutorial/blob/master/tutorial/mockup.png)
+![output screenshot](https://github.com/abhisheksirigari/NGRX-Tutorial/blob/master/tutorial/output.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
