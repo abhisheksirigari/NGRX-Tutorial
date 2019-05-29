@@ -1,15 +1,20 @@
-import { Action } from '@ngrx/store'
+import { Action, createSelector, createFeatureSelector } from '@ngrx/store';
 import { Tutorial } from 'src/app/model/tutorial.model';
 import * as TutorialActions from '../actions/tutorial.actions'
+import { ServicesState, AppState } from '../app.store';
 
-const initialState: Tutorial = {
-    name: '',
-    description: '',
-    active: false
+const intialState = {
+    allServicesLoaded: false,
+    data: null
 }
 
 export function reducer(state: Tutorial[] = [], action: TutorialActions.Actions) {
     switch (action.type) {
+        case TutorialActions.LOADSERVICES:
+            return {
+                allServicesLoaded: true,
+                data: action.payload
+            };
         case TutorialActions.ADD_TUTORIAL:
             return [...state, action.payload];
         case TutorialActions.SEARCH_TUTORIAL:
@@ -24,3 +29,8 @@ export function reducer(state: Tutorial[] = [], action: TutorialActions.Actions)
             return state
     }
 }
+
+const getServices = createFeatureSelector<AppState, ServicesState>('tutorial');
+
+export const getAllServices = createSelector(getServices, state => state.data);
+export const getAllServicesLoaded = createSelector(getServices, state => state.allServicesLoaded);

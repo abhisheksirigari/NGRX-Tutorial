@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import * as TutorialActions from '../../actions/tutorial.actions';
-import { AppState } from '../../app.state';
+import { AppState } from 'src/app/app.store';
 
 import { AppSettingsService } from '../../services/app-settings.service';
 import { Tutorial } from '../../model/tutorial.model';

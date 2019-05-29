@@ -13,11 +13,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-
 import { AppSettingsService } from './services/app-settings.service';
 import { environment } from 'src/environments/environment';
 import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ServicesListComponent } from './components/services-list/services-list.component';
+import { AppEffects } from './app.effects';
 
 @NgModule({
   imports: [
@@ -29,7 +29,7 @@ import { ServicesListComponent } from './components/services-list/services-list.
     StoreModule.forRoot({
       tutorial: reducer
     }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([AppEffects]),
     !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 50 }) : [],
   ],
   declarations: [
@@ -37,6 +37,7 @@ import { ServicesListComponent } from './components/services-list/services-list.
     ServicesListComponent
   ],
   providers: [
+    AppEffects,
     AppSettingsService,
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: LocationStrategy, useClass: HashLocationStrategy }
